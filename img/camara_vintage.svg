@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" width="100%" height="100%">
+  <defs>
+    <filter id="camShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <linearGradient id="metalTop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e3e6e8"/>
+      <stop offset="60%" stop-color="#bcc0c4"/>
+      <stop offset="100%" stop-color="#9ea2a6"/>
+    </linearGradient>
+    <linearGradient id="bodyLeather" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#323438"/>
+      <stop offset="100%" stop-color="#1f2022"/>
+    </linearGradient>
+    <linearGradient id="lensReflect" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a3848"/>
+      <stop offset="50%" stop-color="#121820"/>
+      <stop offset="100%" stop-color="#080b0f"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#camShadow)">
+    <!-- Cuerpo de la cámara -->
+    <rect x="15" y="30" width="130" height="75" rx="8" fill="url(#bodyLeather)"/>
+    
+    <!-- Parte superior metálica plateada -->
+    <path d="M15,38 L15,34 C15,31 18,28 21,28 L139,28 C142,28 145,31 145,34 L145,38 Z" fill="url(#metalTop)"/>
+    <rect x="15" y="98" width="130" height="7" rx="3" fill="url(#metalTop)"/>
+
+    <!-- Dial y Botón disparador superior -->
+    <rect x="30" y="22" width="14" height="6" rx="2" fill="#adb1b5"/>
+    <rect x="115" y="24" width="18" height="4" rx="1.5" fill="#adb1b5"/>
+    <circle cx="124" cy="22" r="4" fill="#d4d8dc"/>
+
+    <!-- Visor -->
+    <rect x="108" y="34" width="14" height="9" rx="2" fill="#151b22" stroke="#8d9296" stroke-width="1"/>
+    <circle cx="115" cy="38.5" r="2.5" fill="#4d9be6" opacity="0.6"/>
+
+    <!-- Flash / Sensor pequeño -->
+    <circle cx="42" cy="40" r="4.5" fill="#cf6d2b" stroke="#7e848a" stroke-width="1"/>
+
+    <!-- Objetivo central (Lente circular) -->
+    <circle cx="80" cy="68" r="32" fill="#bcc0c4"/>
+    <circle cx="80" cy="68" r="28" fill="#1c1d1f"/>
+    <circle cx="80" cy="68" r="23" fill="#2e3034"/>
+    <circle cx="80" cy="68" r="18" fill="url(#lensReflect)"/>
+    
+    <!-- Reflejo azul/morado en el lente óptico -->
+    <ellipse cx="73" cy="62" rx="7" ry="4" transform="rotate(-30 73 62)" fill="#5885c2" opacity="0.5"/>
+    <circle cx="88" cy="74" r="2" fill="#ffffff" opacity="0.6"/>
+  </g>
+</svg>
+
