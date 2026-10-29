@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <!-- Filtros de sombra suave -->
+    <filter id="petalShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="1" dy="4" stdDeviation="5" flood-color="#4a0f1d" flood-opacity="0.22"/>
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Gradiente de Fondo Pastel y Cálido -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8f9"/>
+      <stop offset="50%" stop-color="#fdf0f3"/>
+      <stop offset="100%" stop-color="#f8e4e9"/>
+    </linearGradient>
+
+    <!-- Gradientes de Pétalos de Lirio Rosa con garganta Vino -->
+    <linearGradient id="pinkTop" x1="50%" y1="100%" x2="50%" y2="0%">
+      <stop offset="0%" stop-color="#691223"/>
+      <stop offset="25%" stop-color="#a62947"/>
+      <stop offset="60%" stop-color="#e86b88"/>
+      <stop offset="85%" stop-color="#f8aebd"/>
+      <stop offset="100%" stop-color="#ffedf1"/>
+    </linearGradient>
+
+    <linearGradient id="pinkRight" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#691223"/>
+      <stop offset="25%" stop-color="#a62947"/>
+      <stop offset="60%" stop-color="#e86b88"/>
+      <stop offset="85%" stop-color="#f8aebd"/>
+      <stop offset="100%" stop-color="#ffedf1"/>
+    </linearGradient>
+
+    <linearGradient id="pinkLeft" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#691223"/>
+      <stop offset="25%" stop-color="#a62947"/>
+      <stop offset="60%" stop-color="#e86b88"/>
+      <stop offset="85%" stop-color="#f8aebd"/>
+      <stop offset="100%" stop-color="#ffedf1"/>
+    </linearGradient>
+
+    <linearGradient id="pinkBottomLeft" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#691223"/>
+      <stop offset="30%" stop-color="#a62947"/>
+      <stop offset="65%" stop-color="#e86b88"/>
+      <stop offset="90%" stop-color="#f8aebd"/>
+      <stop offset="100%" stop-color="#ffedf1"/>
+    </linearGradient>
+
+    <linearGradient id="pinkBottomRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#691223"/>
+      <stop offset="30%" stop-color="#a62947"/>
+      <stop offset="65%" stop-color="#e86b88"/>
+      <stop offset="90%" stop-color="#f8aebd"/>
+      <stop offset="100%" stop-color="#ffedf1"/>
+    </linearGradient>
+
+    <linearGradient id="pinkBottom" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#691223"/>
+      <stop offset="30%" stop-color="#a62947"/>
+      <stop offset="65%" stop-color="#e86b88"/>
+      <stop offset="90%" stop-color="#f8aebd"/>
+      <stop offset="100%" stop-color="#ffedf1"/>
+    </linearGradient>
+
+    <!-- Hojas en verde salvia botánico -->
+    <linearGradient id="sageLeaf" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#243d2f"/>
+      <stop offset="60%" stop-color="#466e57"/>
+      <stop offset="100%" stop-color="#69967d"/>
+    </linearGradient>
+
+    <!-- Estambre dorado -->
+    <linearGradient id="goldStamen" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#6e1526"/>
+      <stop offset="70%" stop-color="#dfa44d"/>
+      <stop offset="100%" stop-color="#f5cc7f"/>
+    </linearGradient>
+
+    <linearGradient id="amberAnther" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d48226"/>
+      <stop offset="60%" stop-color="#f2be63"/>
+      <stop offset="100%" stop-color="#9e4e10"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Marco de fondo elegante -->
+  <rect width="100%" height="100%" rx="36" fill="url(#cardBg)"/>
+  <circle cx="200" cy="200" r="156" fill="#ffffff" opacity="0.65"/>
+  <circle cx="200" cy="200" r="150" fill="none" stroke="#e8c2cc" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <circle cx="200" cy="200" r="144" fill="none" stroke="#f2d5dc" stroke-width="0.8"/>
+
+  <!-- Hojas de fondo -->
+  <g id="leaves">
+    <path d="M190,195 Q115,115 65,125 Q115,170 190,195 Z" fill="url(#sageLeaf)" opacity="0.85"/>
+    <path d="M210,195 Q285,110 335,120 Q285,165 210,195 Z" fill="url(#sageLeaf)" opacity="0.85"/>
+    <path d="M205,215 Q290,275 330,325 Q260,300 205,215 Z" fill="url(#sageLeaf)" opacity="0.75"/>
+    <path d="M195,215 Q110,275 70,320 Q135,300 195,215 Z" fill="url(#sageLeaf)" opacity="0.75"/>
+  </g>
+
+  <!-- Pétalos de fondo (Lirio Rosa) -->
+  <g id="backPetals" filter="url(#petalShadow)">
+    <!-- Pétalo Arriba-Izq -->
+    <path d="M200,200 C155,165 105,120 115,65 C145,95 180,150 200,200 Z" fill="url(#pinkLeft)"/>
+    <path d="M200,200 C160,140 135,90 115,65" stroke="#ffffff" stroke-width="1.4" fill="none" opacity="0.7"/>
+
+    <!-- Pétalo Arriba-Der -->
+    <path d="M200,200 C245,165 295,120 285,65 C255,95 220,150 200,200 Z" fill="url(#pinkRight)"/>
+    <path d="M200,200 C240,140 265,90 285,65" stroke="#ffffff" stroke-width="1.4" fill="none" opacity="0.7"/>
+
+    <!-- Pétalo Abajo (Central) -->
+    <path d="M200,200 C180,260 170,315 200,355 C230,315 220,260 200,200 Z" fill="url(#pinkBottom)"/>
+    <path d="M200,200 C200,265 200,315 200,355" stroke="#ffffff" stroke-width="1.4" fill="none" opacity="0.7"/>
+  </g>
+
+  <!-- Pétalos Frontales (Curvatura icónica de lirio rosa) -->
+  <g id="frontPetals" filter="url(#petalShadow)">
+    <!-- Pétalo Arriba (Central) -->
+    <path d="M200,200 C180,140 170,80 200,42 C230,80 220,140 200,200 Z" fill="url(#pinkTop)"/>
+    <path d="M200,200 C200,135 200,85 200,42" stroke="#ffffff" stroke-width="1.8" fill="none" opacity="0.8"/>
+
+    <!-- Pecas / motas vino características del lirio rosa -->
+    <circle cx="197" cy="145" r="1.8" fill="#691223" opacity="0.85"/>
+    <circle cx="204" cy="132" r="1.6" fill="#691223" opacity="0.85"/>
+    <circle cx="196" cy="120" r="1.5" fill="#8a1932" opacity="0.8"/>
+    <circle cx="203" cy="108" r="1.3" fill="#a62947" opacity="0.7"/>
+    <circle cx="198" cy="95" r="1.2" fill="#a62947" opacity="0.6"/>
+
+    <!-- Pétalo Abajo-Izq -->
+    <path d="M200,200 C150,225 105,255 75,290 C110,290 160,255 200,200 Z" fill="url(#pinkBottomLeft)"/>
+    <path d="M200,200 C150,245 110,270 75,290" stroke="#ffffff" stroke-width="1.8" fill="none" opacity="0.8"/>
+    <circle cx="152" cy="242" r="1.8" fill="#691223" opacity="0.85"/>
+    <circle cx="138" cy="254" r="1.6" fill="#691223" opacity="0.85"/>
+    <circle cx="124" cy="264" r="1.4" fill="#8a1932" opacity="0.8"/>
+    <circle cx="110" cy="274" r="1.2" fill="#a62947" opacity="0.6"/>
+
+    <!-- Pétalo Abajo-Der -->
+    <path d="M200,200 C250,225 295,255 325,290 C290,290 240,255 200,200 Z" fill="url(#pinkBottomRight)"/>
+    <path d="M200,200 C250,245 290,270 325,290" stroke="#ffffff" stroke-width="1.8" fill="none" opacity="0.8"/>
+    <circle cx="248" cy="242" r="1.8" fill="#691223" opacity="0.85"/>
+    <circle cx="262" cy="254" r="1.6" fill="#691223" opacity="0.85"/>
+    <circle cx="276" cy="264" r="1.4" fill="#8a1932" opacity="0.8"/>
+    <circle cx="290" cy="274" r="1.2" fill="#a62947" opacity="0.6"/>
+  </g>
+
+  <!-- Corazón y Garganta Color Vino Profundo -->
+  <circle cx="200" cy="200" r="22" fill="#520c1a"/>
+  <circle cx="200" cy="200" r="13" fill="#36050f"/>
+
+  <!-- Estambres dorados elegantes -->
+  <g id="stamens">
+    <!-- 1 -->
+    <path d="M200,200 Q180,165 165,145" stroke="url(#goldStamen)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <ellipse cx="163" cy="143" rx="7" ry="3.5" transform="rotate(-35 163 143)" fill="url(#amberAnther)"/>
+    <!-- 2 -->
+    <path d="M200,200 Q220,165 235,145" stroke="url(#goldStamen)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <ellipse cx="237" cy="143" rx="7" ry="3.5" transform="rotate(35 237 143)" fill="url(#amberAnther)"/>
+    <!-- 3 -->
+    <path d="M200,200 Q235,195 258,202" stroke="url(#goldStamen)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <ellipse cx="260" cy="202" rx="7" ry="3.5" transform="rotate(15 260 202)" fill="url(#amberAnther)"/>
+    <!-- 4 -->
+    <path d="M200,200 Q225,230 236,252" stroke="url(#goldStamen)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <ellipse cx="237" cy="254" rx="7" ry="3.5" transform="rotate(65 237 254)" fill="url(#amberAnther)"/>
+    <!-- 5 -->
+    <path d="M200,200 Q175,230 164,252" stroke="url(#goldStamen)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <ellipse cx="163" cy="254" rx="7" ry="3.5" transform="rotate(-65 163 254)" fill="url(#amberAnther)"/>
+    <!-- 6 -->
+    <path d="M200,200 Q165,195 142,202" stroke="url(#goldStamen)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <ellipse cx="140" cy="202" rx="7" ry="3.5" transform="rotate(-15 140 202)" fill="url(#amberAnther)"/>
+
+    <!-- Pistilo central -->
+    <path d="M200,200 Q200,180 200,162" stroke="#87be93" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="200" cy="160" r="4.5" fill="#3f704a"/>
+  </g>
+
+  <!-- Destellos dorados y de luz -->
+  <g id="sparkles">
+    <circle cx="178" cy="115" r="1.6" fill="#f5cc7f" opacity="0.9"/>
+    <circle cx="228" cy="110" r="1.8" fill="#f5cc7f" opacity="0.9"/>
+    <circle cx="268" cy="165" r="1.3" fill="#f5cc7f" opacity="0.8"/>
+    <circle cx="132" cy="170" r="1.3" fill="#f5cc7f" opacity="0.8"/>
+    <polygon points="214,92 217,86 220,92 226,95 220,98 217,104 214,98 208,95" fill="#fbe0a6" opacity="0.9"/>
+    <polygon points="175,280 177,275 179,280 184,282 179,284 177,289 175,284 170,282" fill="#fbe0a6" opacity="0.8"/>
+  </g>
+</svg>
+

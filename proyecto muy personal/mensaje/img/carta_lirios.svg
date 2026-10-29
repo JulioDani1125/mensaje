@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300" width="100%" height="100%">
+  <defs>
+    <filter id="softGlow2" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#4a0f1d" flood-opacity="0.15"/>
+    </filter>
+    <linearGradient id="parchmentBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffbfa"/>
+      <stop offset="60%" stop-color="#fdf4f6"/>
+      <stop offset="100%" stop-color="#f8e7eb"/>
+    </linearGradient>
+    <linearGradient id="wineRibbon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#540c1a"/>
+      <stop offset="50%" stop-color="#7a1a2e"/>
+      <stop offset="100%" stop-color="#992840"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo de la tarjeta -->
+  <rect width="100%" height="100%" rx="20" fill="url(#parchmentBg)" />
+  <rect x="12" y="12" width="436" height="276" rx="14" fill="none" stroke="#ecd4da" stroke-width="1.2" stroke-dasharray="6 4"/>
+
+  <!-- Tallo y Hojas -->
+  <g id="stems">
+    <path d="M230,260 Q225,180 230,130" stroke="#375742" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+    <path d="M225,200 Q180,180 140,195 Q180,165 227,185" fill="#4d785e" opacity="0.85"/>
+    <path d="M233,185 Q280,165 320,195 Q280,180 233,200" fill="#4d785e" opacity="0.85"/>
+    <path d="M228,150 Q170,120 135,140 Q180,110 228,135" fill="#58856b" opacity="0.8"/>
+    <path d="M232,135 Q280,110 325,140 Q290,120 232,150" fill="#58856b" opacity="0.8"/>
+  </g>
+
+  <!-- Lirio Principal Floreciendo (Rosa y Vino) -->
+  <g id="mainLily" transform="translate(30, -10)" filter="url(#softGlow2)">
+    <!-- Pétalos traseros -->
+    <path d="M200,120 C165,95 130,65 140,25 C165,45 185,85 200,120 Z" fill="#f8b6c4"/>
+    <path d="M200,120 C235,95 270,65 260,25 C235,45 215,85 200,120 Z" fill="#f8b6c4"/>
+    <path d="M200,120 C185,160 180,195 200,225 C220,195 215,160 200,120 Z" fill="#f49ab0"/>
+
+    <!-- Pétalos frontales con gradación y pecas -->
+    <path d="M200,120 C185,80 180,40 200,10 C220,40 215,80 200,120 Z" fill="#f27c98"/>
+    <path d="M200,120 C160,135 125,155 105,180 C130,180 170,155 200,120 Z" fill="#eb6786"/>
+    <path d="M200,120 C240,135 275,155 295,180 C270,180 230,155 200,120 Z" fill="#eb6786"/>
+
+    <!-- Centro vino -->
+    <circle cx="200" cy="120" r="14" fill="#691223"/>
+    
+    <!-- Estambres dorados -->
+    <path d="M200,120 Q185,95 175,80" stroke="#f0b85a" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <ellipse cx="173" cy="79" rx="5" ry="2.5" fill="#c97316"/>
+    <path d="M200,120 Q215,95 225,80" stroke="#f0b85a" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <ellipse cx="227" cy="79" rx="5" ry="2.5" fill="#c97316"/>
+    <path d="M200,120 Q225,115 242,120" stroke="#f0b85a" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <ellipse cx="244" cy="120" rx="5" ry="2.5" fill="#c97316"/>
+    <path d="M200,120 Q175,115 158,120" stroke="#f0b85a" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <ellipse cx="156" cy="120" rx="5" ry="2.5" fill="#c97316"/>
+  </g>
+
+  <!-- Moño de cinta color vino -->
+  <g id="ribbon" transform="translate(0, 10)">
+    <path d="M210,210 C185,195 185,225 210,220 Z" fill="url(#wineRibbon)"/>
+    <path d="M250,210 C275,195 275,225 250,220 Z" fill="url(#wineRibbon)"/>
+    <circle cx="230" cy="216" r="7" fill="#520c1a"/>
+    <!-- Lazos que caen -->
+    <path d="M226,222 Q215,255 205,270" stroke="url(#wineRibbon)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <path d="M234,222 Q245,255 255,270" stroke="url(#wineRibbon)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- Pétalos y destellos flotantes alrededor -->
+  <g id="floatingDetails">
+    <!-- Pétalo flotante 1 -->
+    <path d="M80,80 Q95,65 110,80 Q95,95 80,80 Z" fill="#f8b6c4" opacity="0.75" transform="rotate(20 95 80)"/>
+    <!-- Pétalo flotante 2 -->
+    <path d="M350,75 Q365,60 380,75 Q365,90 350,75 Z" fill="#f49ab0" opacity="0.7" transform="rotate(-25 365 75)"/>
+    <!-- Pétalo flotante 3 -->
+    <path d="M90,220 Q105,205 120,220 Q105,235 90,220 Z" fill="#f8b6c4" opacity="0.65" transform="rotate(-15 105 220)"/>
+    <!-- Pétalo flotante 4 -->
+    <path d="M350,225 Q365,210 380,225 Q365,240 350,225 Z" fill="#f27c98" opacity="0.65" transform="rotate(35 365 225)"/>
+
+    <!-- Destellos dorados ✨ -->
+    <polygon points="120,50 122,44 124,50 130,52 124,54 122,60 120,54 114,52" fill="#ebba63" opacity="0.85"/>
+    <polygon points="340,110 342,105 344,110 349,112 344,114 342,119 340,114 335,112" fill="#ebba63" opacity="0.85"/>
+    <polygon points="310,40 312,35 314,40 319,42 314,44 312,49 310,44 305,42" fill="#ebba63" opacity="0.85"/>
+    <polygon points="140,240 142,235 144,240 149,242 144,244 142,249 140,244 135,242" fill="#ebba63" opacity="0.85"/>
+  </g>
+</svg>
+
